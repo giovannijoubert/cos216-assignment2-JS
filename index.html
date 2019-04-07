@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>CluedUP - The Premiere Movie Database</title>
+      <meta name="author" content="Giovanni Joubert">
+      <meta name="description" content="The Premiere Movie Database">
+      <link rel="stylesheet" href="css/main.css" type="text/css">
+      <link rel="icon" href="img/favico.png" type="image/png">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <script src="js/cluedup.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body onload="loadSplashPosters()">
+      <header>
+         <nav>
+            <span><img alt="CluedUP Logo" class="topLogo" src="img/mainlogo.svg"></span>
+            <ul class="topNav">
+               <li><a class="activeNav" href="#home"><i class="fa fa-home"></i>Home</a></li>
+               <li><a href="discover.html"><i class="fa fa-search"></i>Discover</a></li>
+               <li><a href="featured.html"><i class="fa fa-star" ></i>Featured</a></li>
+               <li><a href="top-rated.html"><i class="far fa-thumbs-up" ></i>Top Rated</a></li>
+               <li><a href="latest.html"><i class="fas fa-bullhorn" ></i>Latest</a></li>
+               <li><a href="calendar.html"><i class="fa fa-calendar-alt" ></i>Calendar</a></li>
+            </ul>
+         </nav>
+         <div class="welcome-msg">
+            <h1>Welcome</h1>
+            <h3>to The Premiere Movie Database</h3>
+         </div>
+         <svg class="custom-header-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,100 100,0 100,100"/>
+         </svg>
+      </header>
+      <h2 class="homepage-hits">Checkout what's trending </h2>
+      <div class="hero-posters">
+      </div>
+      <footer>
+         <p>COS216 Practical 1 - u18009035</p>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Calendar - CluedUP</title>
+      <meta name="author" content="Giovanni Joubert">
+      <meta name="description" content="The Premiere Movie Database">
+      <link rel="stylesheet" href="css/main.css" type="text/css">
+      <link rel="stylesheet" href="css/calendar.css" type="text/css">
+      <link rel="icon" href="img/favico.png" type="image/png">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <script src="js/cluedup_calendar.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body onload="loadCalendar()">
+      <header>
+         <nav>
+            <span><img alt="CluedUP Logo" class="topLogo" src="img/mainlogo.svg"></span>
+            <ul class="topNav">
+               <li><a  href="index.html"><i class="fa fa-home"></i>Home</a></li>
+               <li><a href="discover.html"><i class="fa fa-search"></i>Discover</a></li>
+               <li><a href="featured.html"><i class="fa fa-star" ></i>Featured</a></li>
+               <li><a href="top-rated.html"><i class="far fa-thumbs-up" ></i>Top Rated</a></li>
+               <li><a href="latest.html"><i class="fas fa-bullhorn" ></i>Latest</a></li>
+               <li><a class="activeNav" href="calendar.html"><i class="fa fa-calendar-alt" ></i>Calendar</a></li>
+            </ul>
+         </nav>
+         <svg class="custom-header-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#fff" points="0,100 100,0 100,100"/>
+         </svg>
+         <div class="welcome-msg">
+            <h1>Calendar</h1>
+            <h3>to The Premiere Movie Database</h3>
+         </div>
+      </header>
+      <div class="row">
+         <div class="column left">
+            <div  class="container">
+               <div class="calendar light">
+                  <div class="calendar_header">
+                     <h1 class = "header_title">March 2019</h1>
+                     <div id="cal_nav">
+                        <a id="prev" ><i class="fas fa-arrow-left"></i>PREVIOUS</a>
+                        <a id="today" >TODAY</a>
+                        <a id="next" >NEXT <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+                  <div class="calendar_plan">
+                     <div class="cl_plan">
+                        <div class="cl_title">Release Date</div>
+                        <div class="cl_copy">Movie Title</div>
+                     </div>
+                     <div class="spesific_date">
+                        <label for="datepicker">Jump to spesific date: </label><input  type="date" id="datepicker" onchange="loadCalendar('datepicker')">
+                     </div>
+                  </div>
+                  <p class="ce_title">The Month's Movies</p>
+                  <div class="ce_loader">
+                     <img alt="loader" src="img/ajax-loader-small.gif">
+                  </div>
+                  <div class="calendar_events">
+                  </div>
+               </div>
+            </div>
+             <button onclick="downloadCalendar()" id="DownloadCal" type="button">Download Calendar</button>
+         </div>
+         <div class="column right right-desc-loader">
+            <img alt="loader" src="img/ajax-loader.gif">
+         </div>
+         <div class="column right right-desc">
+            <h1 class="movie_title">Title</h1>
+            <iframe class="youtube" src="https://www.youtube.com/embed/id61hcbdMZA" allowfullscreen></iframe>
+            <span class="movie_release"></span>
+            <p class="movie_desc"></p>
+            <div class="single-poster-age-rating"></div>
+         </div>
+      </div>
+      <footer>
+         <p>COS216 Practical 1 - u18009035</p>
+      </footer>
+   </body>
+</html>

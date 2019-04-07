@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Discover - CluedUP</title>
+      <meta name="author" content="Giovanni Joubert">
+      <meta name="description" content="the Latest in Hollywood Hits">
+      <link rel="stylesheet" href="css/main.css" type="text/css">
+      <link rel="stylesheet" href="css/discover.css" type="text/css">
+      <link rel="icon" href="img/favico.png" type="image/png">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <script src="js/cluedup.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body onload="loadDiscover()">
+      <header>
+         <nav>
+            <span><img alt="CluedUP Logo" class="topLogo" src="img/mainlogo.svg"></span>
+            <ul class="topNav">
+               <li><a  href="index.html"><i class="fa fa-home"></i>Home</a></li>
+               <li><a class="activeNav" href="discover.html"><i class="fa fa-search"></i>Discover</a></li>
+               <li><a href="featured.html"><i class="fa fa-star" ></i>Featured</a></li>
+               <li><a href="top-rated.html"><i class="far fa-thumbs-up" ></i>Top Rated</a></li>
+               <li><a href="latest.html"><i class="fas fa-bullhorn" ></i>Latest</a></li>
+               <li><a href="calendar.html"><i class="fa fa-calendar-alt" ></i>Calendar</a></li>
+            </ul>
+         </nav>
+         <svg class="custom-header-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,100 100,0 100,100"/>
+         </svg>
+         <div class="welcome-msg">
+            <h1>Discover</h1>
+            <h3>the Latest in Hollywood Hits</h3>
+         </div>
+      </header>
+      <div class="body-elements">
+         <div class="filter-container">
+            <input type="text" class="search-bar" id="search-bar" placeholder="  Looking for a particular movie?">
+            <a ><i onclick="searchDiscover()" class="fa fa-search search-icon"></i></a>
+            <div class="filter-rating">
+               <div class="rate" >
+                  <input onclick="filterRating()" type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                  <input onclick="filterRating()" type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                  <input onclick="filterRating()" type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                  <input onclick="filterRating()" type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                  <input onclick="filterRating()" type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+               </div>
+            </div>
+            <span class="filter-genre">
+               <select id="genrefilter" onchange="filterGenre()">
+                  <option selected disabled>Genre</option>
+                  <option value="28">Action</option>
+                  <option value="12">Adventure</option>
+                  <option value="16">Animation</option>
+                  <option value="35">Comedy</option>
+                  <option value="80">Crime</option>
+                  <option value="99">Documentary</option>
+                  <option value="18">Drama</option>
+                  <option value="10751">Family</option>
+                  <option value="14">Fantasy</option>
+                  <option value="36">History</option>
+                  <option value="27">Horror</option>
+                  <option value="10402">Music</option>
+                  <option value="9648">Mystery</option>
+                  <option value="10749">Romance</option>
+                  <option value="878">Science Fiction</option>
+                  <option value="53">Thriller</option>
+                  <option value="10752">War</option>
+                  <option value="37">Western</option>
+               </select>
+            </span>
+            <p onclick="clearFilters()" id="clearfilters">Clear filters</p>
+         </div>
+      </div>
+      <div class="posters-holder">
+      </div>
+      <!--body elements-->
+      <footer>
+         <p>COS216 Practical 1 - u18009035</p>
+      </footer>
+   </body>
+</html>
